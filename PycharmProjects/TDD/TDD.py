@@ -111,23 +111,17 @@ for i in range(len(truth_table_list)):
         list1 = list()
         inputs_list_of_all.append(list1)
     inputs = list()
-    a1 = bool(truth_table_list[i][0])
-    print('a1: ', a1)
-    b2 = bool(truth_table_list[i][1])
-    print('b2: ', b2)
-    c3 = bool(truth_table_list[i][2])
-    print('c3: ', c3)
-    inputs.append(a1)
-    inputs.append(b2)
-    inputs.append(c3)
+    for j in range(len(truth_table_list[i])):
+        inputs.append(bool(truth_table_list[i][j]))
+    print("inputs: ", inputs)
     end_list = connect(order_list, list_of_3_s_ordered, inputs_list_of_all, inputs)
-    for i in range(len(end_list)):
-        if end_list[i]:
+    for j in range(len(end_list)):
+        if end_list[j]:
             continue
         else:
-            if list_of_3_s_ordered[i][0] == '1':
-                print(gate_and(inputs_list_of_all[i]))
-            if list_of_3_s_ordered[i][0] == '2':
-                print(gate_or(inputs_list_of_all[i]))
-            if list_of_3_s_ordered[i][0] == '3':
-                print(gate_not(inputs_list_of_all[i]))
+            if list_of_3_s_ordered[j][0] == '1':
+                print(gate_and(inputs_list_of_all[j]))
+            if list_of_3_s_ordered[j][0] == '2':
+                print(gate_or(inputs_list_of_all[j]))
+            if list_of_3_s_ordered[j][0] == '3':
+                print(gate_not(inputs_list_of_all[j]))
