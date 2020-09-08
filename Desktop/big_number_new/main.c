@@ -266,6 +266,7 @@ int sign(char input1[], char input2[]) //0:++,1:+-, 2:-+, 3:--
     if(sign1_num == 0 && sign2_num == 1)return 1; //+-
     if(sign1_num == 1 && sign2_num == 0)return 2; //-+
     if(sign1_num == 1 && sign2_num == 1)return 3; //--
+
 }
 void test_oper(char input1[], char input2[], char op)
 {

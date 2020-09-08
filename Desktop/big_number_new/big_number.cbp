@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<ExtraCommands>
+			<Add before="gcc -pg -fprofile-arcs -ftest-coverage -o main main.c" />
+			<Add before="main" />
+		</ExtraCommands>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
